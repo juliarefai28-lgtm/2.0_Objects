@@ -36,14 +36,19 @@ public class BasicGameApp implements Runnable {
 	public JFrame frame;
 	public Canvas canvas;
    public JPanel panel;
+
    
 	public BufferStrategy bufferStrategy;
 	public Image astroPic;
+    public Image astroidPic;
+    public Image astroidPic2;
 
    //Declare the objects used in the program
    //These are things that are made up of more than one variable type
 	private Astronaut astro;
     private Astronaut astro2;
+    private Astroid astroid1;
+    private Astroid astroid2;
 
 
    // Main method definition
@@ -77,7 +82,13 @@ public class BasicGameApp implements Runnable {
 		astroPic = Toolkit.getDefaultToolkit().getImage("astronaut.png"); //load the picture
 		astro = new Astronaut(WIDTH/2,HEIGHT/2);
         astro2=new Astronaut(randx,randy);
+        astroPic = Toolkit.getDefaultToolkit().getImage("astronaut.png");
+        astroidPic = Toolkit.getDefaultToolkit().getImage("astroid.png");
+        astroidPic2= Toolkit.getDefaultToolkit().getImage("astroid.png");
 
+        astro2=new Astronaut(randx,randy);
+        astroid1= new Astroid(100,200);
+        astroid2= new Astroid(50,100);
 
 	}// BasicGameApp()
 
@@ -106,6 +117,8 @@ public class BasicGameApp implements Runnable {
       //calls the move( ) code in the objects
 		astro.move();
         astro2.move();
+        astroid1.move();
+        astroid2.move();
 
 	}
 	
@@ -161,6 +174,9 @@ public class BasicGameApp implements Runnable {
       //draw the image of the astronaut
 		g.drawImage(astroPic, astro.xpos, astro.ypos, astro.width, astro.height, null);
         g.drawImage(astroPic,astro2.xpos, astro2.ypos, astro.width,astro.height,null);
+        g.drawImage(astroidPic, astroid1.xpos,astroid1.ypos,astroid1.width,astroid1.height, null);
+        g.drawImage(astroidPic2, astroid2.xpos,astroid2.ypos,astroid2.width,astroid2.height, null);
+
         g.fillRect(100,300,200,200);
         g.setColor(Color.GREEN);
 
