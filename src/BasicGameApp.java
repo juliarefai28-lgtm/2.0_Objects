@@ -91,9 +91,7 @@ public class BasicGameApp implements Runnable {
         astroid2= new Astroid(50,100);
 
 	}// BasicGameApp()
-
-   
-//*******************************************************************************
+    
 //User Method Section
 //
 // put your code to do things here.
