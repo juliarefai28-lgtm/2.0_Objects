@@ -127,6 +127,11 @@ public class BasicGameApp implements Runnable {
             System.out.println("CRASH!");
             astro.dx=-astro.dx;
             astro2.dx=-astro2.dx;
+
+            if(astroid1.hitbox.intersects(astroid2.hitbox)) {
+                astroid1.dx = -astroid1.dx;
+                astroid2.dx = -astroid2.dx;
+            }
         }
     }
 	

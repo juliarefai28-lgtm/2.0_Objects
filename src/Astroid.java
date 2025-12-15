@@ -1,3 +1,5 @@
+import java.awt.*;
+
 public class Astroid {
     //VARIABLE DECLARATION SECTION
     //Here's where you state which variables you are going to use.
@@ -8,7 +10,8 @@ public class Astroid {
     public int dy;                    //the speed of the hero in the y direction
     public int width;
     public int height;
-    public boolean isAlive;            //a boolean to denote if the hero is alive or dead.
+    public boolean isAlive;//a boolean to denote if the hero is alive or dead.
+    public Rectangle hitbox;
 
 
     // METHOD DEFINITION SECTION
@@ -28,7 +31,7 @@ public class Astroid {
         height = 85;
         isAlive = false;
 
-
+hitbox= new Rectangle(xpos,ypos,width,height);
     } // constructor
 
     //The move method.Everytime this is run (or "called") the hero's x position and y position change by dx and dy
