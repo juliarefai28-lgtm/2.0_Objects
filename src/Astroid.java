@@ -12,6 +12,8 @@ public class Astroid {
     public int height;
     public boolean isAlive;//a boolean to denote if the hero is alive or dead.
     public Rectangle hitbox;
+    public boolean isCrashing;
+
 
 
     // METHOD DEFINITION SECTION
@@ -30,6 +32,7 @@ public class Astroid {
         width = 85;
         height = 85;
         isAlive = false;
+        isCrashing=false;
 
 hitbox= new Rectangle(xpos,ypos,width,height);
     } // constructor

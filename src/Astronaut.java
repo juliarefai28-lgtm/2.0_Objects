@@ -19,6 +19,7 @@ public class Astronaut {
     public Rectangle hitbox;
 
 
+
     // METHOD DEFINITION SECTION
 
     // Constructor Definition
